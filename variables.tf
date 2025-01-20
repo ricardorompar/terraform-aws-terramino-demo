@@ -7,3 +7,8 @@ variable "port" {
   type    = number
   default = 80
 }
+
+variable "instance_type" {
+  type = string
+  default = "t3.small"
+}
