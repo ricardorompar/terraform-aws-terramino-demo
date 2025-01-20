@@ -8,10 +8,6 @@ export HOME="/tmp/home"
 export GOPATH="/tmp/go"
 export GOMODPATH="/tmp/go/pkg/mod"
 export GOCACHE="/tmp/go/cache"
-export HCP_CLIENT_ID=${client_id}
-export HCP_CLIENT_SECRET=${client_secret}
-export HCP_ORGANIZATION_ID=${org_id}
-export HCP_PROJECT_ID=${project_id}
 
 cd /tmp
 git clone https://github.com/hashicorp-education/terramino-go.git

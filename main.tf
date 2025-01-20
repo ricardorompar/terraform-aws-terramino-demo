@@ -20,15 +20,11 @@ resource "aws_instance" "web" {
   security_groups = [aws_security_group.allow_web_traffic.name]
 
   user_data = templatefile("boot.sh", {
-    client_id     = var.client_id,
-    client_secret = var.client_secret,
-    org_id        = var.org_id,
-    project_id    = var.project_id,
-    app_name      = var.waypoint_application,
-    port          = var.port
+    app_name = var.app_name,
+    port     = var.port
   })
 
   tags = {
-    Name = "terramino-${var.waypoint_application}"
+    Name = "terramino-${var.app_name}"
   }
 }
