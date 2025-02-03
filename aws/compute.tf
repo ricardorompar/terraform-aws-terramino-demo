@@ -19,7 +19,7 @@ resource "aws_instance" "web" {
   instance_type   = var.instance_type
   security_groups = [aws_security_group.allow_web_traffic.name]
 
-  user_data = templatefile("boot.sh", {
+  user_data = templatefile("${path.module}/../boot.sh", {
     app_name = var.app_name,
     port     = var.port
   })

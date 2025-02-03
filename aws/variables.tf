@@ -1,6 +1,6 @@
 variable "app_name" {
+  description = "Name for the application to deploy. This will also be included in the names of some of the resources."
   type    = string
-  default = "hashicardo"
 }
 
 variable "port" {
@@ -9,6 +9,6 @@ variable "port" {
 }
 
 variable "instance_type" {
-  type = string
+  type    = string
   default = "t2.large"
 }
