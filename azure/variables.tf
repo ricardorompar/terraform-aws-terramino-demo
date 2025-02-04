@@ -12,3 +12,8 @@ variable "instance_type" {
   type    = string
   default = "Standard_B1s"
 }
+
+variable "location" {
+  type    = string
+  default = "centralus"
+}

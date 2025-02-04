@@ -3,7 +3,7 @@
 #######################
 resource "azurerm_public_ip" "pubip" {
   name                = "${var.app_name}-ip"
-  location            = local.location
+  location            = var.location
   resource_group_name = azurerm_resource_group.myresourcegroup.name
   allocation_method   = "Static"
   domain_name_label   = var.app_name
@@ -14,7 +14,7 @@ resource "azurerm_public_ip" "pubip" {
 #######################
 resource "azurerm_network_interface" "nic" {
   name                = "${var.app_name}-nic"
-  location            = local.location
+  location            = var.location
   resource_group_name = azurerm_resource_group.myresourcegroup.name
 
   ip_configuration {
@@ -36,7 +36,7 @@ resource "azurerm_network_interface_security_group_association" "nic-sg" {
 ########################
 resource "azurerm_linux_virtual_machine" "web" {
   name                            = "terramino-${var.app_name}"
-  location                        = local.location
+  location                        = var.location
   resource_group_name             = azurerm_resource_group.myresourcegroup.name
   size                            = var.instance_type
   admin_username                  = "hashicorp"

@@ -1,14 +1,5 @@
 # Copyright (c) HashiCorp, Inc.
 
-terraform {
-  required_providers {
-    tfe = {
-      source = "hashicorp/tfe"
-      version = "0.63.0"
-    }
-  }
-}
-
 data "tfe_organization" "org" {
   name = var.tfc_org
 }
