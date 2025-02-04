@@ -44,7 +44,7 @@ resource "azurerm_linux_virtual_machine" "web" {
   disable_password_authentication = false
   network_interface_ids           = [azurerm_network_interface.nic.id]
 
-  user_data = base64encode(templatefile("${path.module}/../boot.sh", {
+  user_data = base64encode(templatefile("boot.sh", {
     app_name = var.app_name,
     port     = var.port
   }))
