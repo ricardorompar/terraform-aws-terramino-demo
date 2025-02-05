@@ -67,7 +67,7 @@ resource "tfe_workspace_variable_set" "terramino" {
 # Variables:
 resource "tfe_variable" "app_name" {
   key             = "app_name"
-  value           = "YOUR_NAME"
+  value           = var.app_name
   category        = "terraform"
   description     = "Name for the application to deploy. This will also be included in the names of some of the resources."
   variable_set_id = tfe_variable_set.terramino.id
@@ -91,7 +91,7 @@ resource "tfe_variable" "instance_type" {
 
 resource "tfe_variable" "location" {
   key             = "location"
-  value           = "centralus"
+  value           = var.location
   category        = "terraform"
   description     = "Azure region to deploy your resources in."
   variable_set_id = tfe_variable_set.terramino.id
