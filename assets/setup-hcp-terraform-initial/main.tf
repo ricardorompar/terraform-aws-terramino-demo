@@ -16,3 +16,8 @@ resource "tfe_workspace" "terramino" {
   tag_names      = var.tf_workspace_tags
   project_id = tfe_project.acme.id
 }
+
+resource "tfe_workspace_settings" "local_execution" {
+  workspace_id   = tfe_workspace.terramino.id
+  execution_mode = "local"
+}
