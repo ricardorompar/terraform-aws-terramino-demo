@@ -10,7 +10,7 @@ resource "tfe_workspace" "terramino" {
   project_id     = data.tfe_project.acme.id
 
   vcs_repo {
-    identifier     = "${var.gitlab_base_url}/${var.gitlab_group_path}/terramino"
+    identifier     = "${var.gitlab_group_path}/terramino"
     oauth_token_id = tfe_oauth_client.gitlab.oauth_token_id
   }
 }

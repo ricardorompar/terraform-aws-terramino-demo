@@ -61,22 +61,6 @@ resource "tfe_variable" "app_name" {
   workspace_id    = data.tfe_workspace.terramino.id
 }
 
-resource "tfe_variable" "port" {
-  key             = "port"
-  value           = 80
-  category        = "terraform"
-  description     = "VM Port to expose your application on."
-  workspace_id    = data.tfe_workspace.terramino.id
-}
-
-resource "tfe_variable" "instance_type" {
-  key             = "instance_type"
-  value           = "Standard_B1s"
-  category        = "terraform"
-  description     = "VM instance type."
-  workspace_id    = data.tfe_workspace.terramino.id
-}
-
 resource "tfe_variable" "location" {
   key             = "location"
   value           = var.location
