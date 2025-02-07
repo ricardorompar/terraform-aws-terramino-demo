@@ -34,7 +34,7 @@ resource "azurerm_network_security_group" "allow_web_traffic" {
     access                     = "Allow"
     protocol                   = "Tcp"
     source_port_range          = "*"
-    destination_port_range     = "${var.port}"
+    destination_port_range     = var.port
     source_address_prefix      = "*"
     destination_address_prefix = "*"
   }

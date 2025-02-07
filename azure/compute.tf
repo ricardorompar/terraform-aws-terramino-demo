@@ -6,8 +6,8 @@ resource "azurerm_public_ip" "pubip" {
   location            = var.location
   resource_group_name = azurerm_resource_group.myresourcegroup.name
   allocation_method   = "Static"
-# Optional domain name label. Removing in case resources are attempted to be created again.
-#   domain_name_label   = var.app_name  
+  # Optional domain name label. Removing in case resources are attempted to be created again.
+  #   domain_name_label   = var.app_name  
 }
 
 #######################

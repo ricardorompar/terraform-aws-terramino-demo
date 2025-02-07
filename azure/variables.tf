@@ -1,6 +1,6 @@
 variable "app_name" {
   description = "Name for the application to deploy. This will also be included in the names of some of the resources."
-  type    = string
+  type        = string
 }
 
 variable "port" {
