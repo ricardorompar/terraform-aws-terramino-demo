@@ -8,7 +8,7 @@ data "gitlab_group" "platform" {
 
 ## Creates a new project under the Platform group in Gitlab
 resource "gitlab_project" "app_gateway" {
-  name                   = "app-gateway"
+  name                   = "terraform-azurerm-app-gateway"
   namespace_id           = data.gitlab_group.platform.id
   visibility_level       = "public"
   default_branch         = "main"
