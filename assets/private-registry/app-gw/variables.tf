@@ -4,11 +4,11 @@ variable "app_name" {
 }
 
 variable "resource_group_name" {
-  type    = number
+  type    = string
 }
 
 variable "virtual_network_name" {
-  type    = number
+  type    = string
 }
 
 variable "location" {
