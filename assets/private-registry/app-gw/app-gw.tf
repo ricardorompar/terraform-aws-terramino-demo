@@ -7,7 +7,7 @@ resource "random_integer" "domain" {
 #      Public IP      #
 #######################
 resource "azurerm_public_ip" "appgw-pip" {
-  name                = "${var.app_name}-ip"
+  name                = "${var.app_name}-appgw-ip"
   location            = var.location
   resource_group_name = var.resource_group_name
   allocation_method   = "Dynamic"

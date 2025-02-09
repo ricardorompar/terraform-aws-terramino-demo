@@ -9,3 +9,8 @@
 #   vm_ips               = azurerm_network_interface.nic.private_ip_addresses
 #   vm_subnet_prefix     = azurerm_subnet.vm_subnet.address_prefixes[0]
 # }
+
+
+# output "new_ip" {
+#     value = module.application-gateway.new_ip
+# }

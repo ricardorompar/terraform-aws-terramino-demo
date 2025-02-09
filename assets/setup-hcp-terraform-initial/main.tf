@@ -14,7 +14,8 @@ resource "tfe_workspace" "terramino" {
   name           = "terramino-${var.admin_user}"
   organization   = data.tfe_organization.org.name
   tag_names      = var.tf_workspace_tags
-  project_id = tfe_project.acme.id
+  project_id     = tfe_project.acme.id
+  auto_apply     = true
 }
 
 resource "tfe_workspace_settings" "local_execution" {
