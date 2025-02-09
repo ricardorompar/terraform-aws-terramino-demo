@@ -8,7 +8,8 @@ resource "tfe_workspace" "terramino" {
   organization   = data.tfe_organization.org.name
   tag_names      = var.tf_workspace_tags
   project_id     = data.tfe_project.acme.id
-
+  auto_apply     = true
+  
   vcs_repo {
     identifier     = "${var.gitlab_group_path}/terramino"
     oauth_token_id = tfe_oauth_client.gitlab.oauth_token_id
