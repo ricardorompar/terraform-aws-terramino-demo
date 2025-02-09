@@ -10,8 +10,8 @@ resource "azurerm_public_ip" "appgw-pip" {
   name                = "${var.app_name}-appgw-ip"
   location            = var.location
   resource_group_name = var.resource_group_name
-  allocation_method   = "Dynamic"
-  domain_name_label   = "${var.app_name}-${random_integer.domain.result}"
+  allocation_method   = "Static"
+#   domain_name_label   = "${var.app_name}-${random_integer.domain.result}"
 }
 
 #######################
